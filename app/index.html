@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bidding Dapp</title>
+  
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Bidding Ehtereum Dapp</h1>
+  
+  <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
+  <h3><span class="black">Contract Address: </span><span id="contract_address"></span></h3>
+  <h3><span class="black">Contract Balance: </span><span id="contract_balance"></span></h3>
+  <h3>Item Name: <span class="black"><span id="item_name"></span></span></h3>
+  <h3>Item Description: <span class="black"><span id="item_description"></span></span></h3>
+  <h3>Duration(Sec): <span class="black"><span id="item_duration"></span></span></h3>
+  <h3>Started Price(Ether): <span class="black"><span id="item_started_price"></span></span></h3>
+  <h3>High Price(Ether): <span class="black"><span id="hight_price"></span></span></h3>
+
+  <br>
+  <h1>Bid Item</h1>
+  <br><label for="account_num">Account No.:</label><input type="text" id="account_num" placeholder="e.g., 0"></input>
+  <br><label for="bid_name">Name:</label><input type="text" id="bid_name" placeholder="e.g., Albert"></input>
+  <br><label for="bid_amount">Amount(ether):</label><input type="text" id="bid_amount" placeholder="e.g., 95"></input>
+  <br><br><button id="send" onclick="App.sendBid()">Bid</button>
+  <br><br>
+  <span id="status"></span>
+  <br>
+  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+  <br>
+
+
+  <br>
+  <h1>Claim Bid Amount</h1>
+  <br><label for="claim_account_num">Account No.:</label><input type="text" id="claim_account_num" placeholder="e.g., 0"></input>
+  <br><br><button id="claim" onclick="App.claimBid()">Clain Bid Amount</button>
+  <br><br>
+  <span id="status"></span>
+  <br>
+  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+  <br>
+
+
+  <br>
+  
+  <h1>Kill Contract</h1>
+  <br><br><button id="suicide" onclick="App.suicide()">Kill Contract</button>
+
+  <br>
+  <h1>Winning Bidding Events</h1>
+  <table id="highBidEventTable" margin="100" width="100%"></table>
+
+
+  <h1>Failed Bidding Events</h1>
+  <table id="failedBidEventTable" margin="100" width="100%"></table>
+
+</body>
+</html>
